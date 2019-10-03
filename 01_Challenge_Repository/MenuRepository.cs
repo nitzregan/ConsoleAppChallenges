@@ -34,17 +34,35 @@ namespace _01_Challenge_Repository
 
         //public void UpdateMenuItemByMenuItemNumber(int menuItemNumber, MenuItem updates)
         //{
-        //    stuff goes here, will figure out l8r sk8r
+        //    //stuff goes here, will figure out l8r sk8r
+
+        //    foreach (MenuItem meal in _menuItemList)
+        //    {
+        //        if (menuItemNumber == meal.MenuItemNumber)
+        //        {
+        //            meal.MenuItemNumber = updates.MenuItemNumber;
+        //            meal.MenuItemName = updates.MenuItemName;
+        //            meal.DescriptionOfMenuItem = updates.DescriptionOfMenuItem;
+        //            meal.ListOfIngredients = updates.ListOfIngredients;
+        //            meal.MenuItemPrice = updates.MenuItemPrice;
+        //        }
+        //    }
         //}
 
-
-
-
-
-
-
-
-
+        //public void UpdateMenuItemByMenuItemName(string menuItemName, MenuItem updatedItem)
+        //{
+        //    foreach (MenuItem meal in _menuItemList)
+        //    {
+        //        if (menuItemName == meal.MenuItemName)
+        //        {
+        //            meal.MenuItemNumber = updatedItem.MenuItemNumber;
+        //            meal.MenuItemName = updatedItem.MenuItemName;
+        //            meal.DescriptionOfMenuItem = updatedItem.DescriptionOfMenuItem;
+        //            meal.ListOfIngredients = updatedItem.ListOfIngredients;
+        //            meal.MenuItemPrice = updatedItem.MenuItemPrice;
+        //        }
+        //    }
+        //}
 
         public void SeedList()
         {
