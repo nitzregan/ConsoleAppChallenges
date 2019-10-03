@@ -27,11 +27,12 @@ namespace _01_Challenge_Console
                     "1. See All Menu Items\n" +
                     "2. Add New Menu Item\n" +
                     "3. Remove Item from Menu\n" +
-                    "4. Exit Program\n");
+                    "4. Update Menu Item\n" +
+                    "5. Exit Program\n");
 
-                string UserInput = Console.ReadLine();
+                string userInput = Console.ReadLine();
 
-                switch (UserInput)
+                switch (userInput)
                 {
                     case "1":
                         Console.Clear();
@@ -45,11 +46,11 @@ namespace _01_Challenge_Console
                         Console.Clear();
                         RemoveMenuItemFromList();
                         break;
-                    //case "4":
-                    //    Console.Clear();
-                    //    UpdateMenuItem;
-                    //    break;
                     case "4":
+                        Console.Clear();
+                        UpdateMenuItemByMenuItemNumber();
+                        break;
+                    case "5":
                         usingMenu = false;
                         break;
 
@@ -119,13 +120,40 @@ namespace _01_Challenge_Console
             GetMenuItems();
         }
 
+        public void UpdateMenuItemByMenuItemNumber()
+        {
+            GetMenuItems();
 
+            Console.WriteLine("Which menu item would you like to update? Enter item number");
+            string menuItemNumberAsString = Console.ReadLine();
+            int menuItemNumber = int.Parse(menuItemNumberAsString);
 
+            MenuItem oldMenuItem = _repo.GetMenuItem(menuItemNumber);
+            Console.WriteLine(oldMenuItem);
 
+            Console.WriteLine("What number would you like to assign to this menu item?");
+            string updatedMenuItemNumberAsString = Console.ReadLine();
+            int updatedMenuItemNumber = int.Parse(updatedMenuItemNumberAsString);
 
+            Console.WriteLine("What is this item called?");
+            string updatedMenuItemName = Console.ReadLine();
 
+            Console.WriteLine("Describe this item.");
+            string updatedDescriptionOfMenuItem = Console.ReadLine();
 
+            Console.WriteLine("What ingredients are in this?");
+            string updatedListOfIngredients = Console.ReadLine();
 
+            Console.WriteLine("How much does this cost?");
+            string updatedItemPriceAsString = Console.ReadLine();
+            float updatedMenuItemPrice = float.Parse(updatedItemPriceAsString);
 
+            MenuItem updatedMenuItem = new MenuItem(updatedMenuItemNumber, updatedMenuItemName, updatedDescriptionOfMenuItem, updatedListOfIngredients, updatedMenuItemPrice);
+
+            _repo.UpdateMenuItemByMenuItemNumber(menuItemNumber, updatedMenuItem);
+
+            Console.WriteLine(oldMenuItem);
+            Console.ReadKey();
+        }
     }
 }

@@ -29,9 +29,9 @@ namespace _03_Challenge_Console
                     "3. View Outings by Cost\n" +
                     "4. Exit Program\n");
 
-                string UserInput = Console.ReadLine();
+                string userInput = Console.ReadLine();
 
-                switch (UserInput)
+                switch (userInput)
                 {
                     case "1":
                         Console.Clear();
@@ -106,9 +106,9 @@ namespace _03_Challenge_Console
                 "1. View Total Cost of All Outings\n" +
                 "2. View Total Cost of Each Type of Outing");
 
-            string UserInput = Console.ReadLine();
+            string userInput = Console.ReadLine();
 
-            switch (UserInput)
+            switch (userInput)
             {
                 case "1":
                     Console.Clear();

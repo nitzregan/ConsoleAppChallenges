@@ -32,22 +32,32 @@ namespace _01_Challenge_Repository
             }
         }
 
-        //public void UpdateMenuItemByMenuItemNumber(int menuItemNumber, MenuItem updates)
-        //{
-        //    //stuff goes here, will figure out l8r sk8r
+        public MenuItem GetMenuItem(int menuItemNumber)
+        {
+            foreach (MenuItem meal in _menuItemList)
+            {
+                if (meal.MenuItemNumber == menuItemNumber)
+                {
+                    return meal;
+                }
+            }
+            return null;
+        }
 
-        //    foreach (MenuItem meal in _menuItemList)
-        //    {
-        //        if (menuItemNumber == meal.MenuItemNumber)
-        //        {
-        //            meal.MenuItemNumber = updates.MenuItemNumber;
-        //            meal.MenuItemName = updates.MenuItemName;
-        //            meal.DescriptionOfMenuItem = updates.DescriptionOfMenuItem;
-        //            meal.ListOfIngredients = updates.ListOfIngredients;
-        //            meal.MenuItemPrice = updates.MenuItemPrice;
-        //        }
-        //    }
-        //}
+        public void UpdateMenuItemByMenuItemNumber(int menuItemNumber, MenuItem updates)
+        {
+            foreach (MenuItem meal in _menuItemList)
+            {
+                if (menuItemNumber == meal.MenuItemNumber)
+                {
+                    meal.MenuItemNumber = updates.MenuItemNumber;
+                    meal.MenuItemName = updates.MenuItemName;
+                    meal.DescriptionOfMenuItem = updates.DescriptionOfMenuItem;
+                    meal.ListOfIngredients = updates.ListOfIngredients;
+                    meal.MenuItemPrice = updates.MenuItemPrice;
+                }
+            }
+        }
 
         //public void UpdateMenuItemByMenuItemName(string menuItemName, MenuItem updatedItem)
         //{

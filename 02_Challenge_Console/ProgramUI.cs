@@ -29,9 +29,9 @@ namespace _02_Challenge_Console
                     "3. New Claim\n" +
                     "4. Exit Program\n");
 
-                string UserInput = Console.ReadLine();
+                string userInput = Console.ReadLine();
 
-                switch (UserInput)
+                switch (userInput)
                 {
                     case "1":
                         Console.Clear();

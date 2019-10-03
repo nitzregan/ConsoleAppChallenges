@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F1DA9B7B-2C90-45A3-8BA1-DFAEBB2ED006}</ProjectGuid>
+    <ProjectGuid>{A5C072FA-A219-4220-B6B2-A5A26AC6F7C7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_03_Challenge_Console</RootNamespace>
-    <AssemblyName>03_Challenge_Console</AssemblyName>
+    <RootNamespace>_05_Challenge_Console</RootNamespace>
+    <AssemblyName>05_Challenge_Console</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,17 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProgramUI.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\03_Console_Repository\03_Console_Repository.csproj">
-      <Project>{d1d18f20-7808-44dd-8d09-e0aed712a4fb}</Project>
-      <Name>03_Console_Repository</Name>
+    <ProjectReference Include="..\05_Challenge_Repository\05_Challenge_Repository.csproj">
+      <Project>{C679C798-1355-4ABD-8B46-A5B8412AE962}</Project>
+      <Name>05_Challenge_Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

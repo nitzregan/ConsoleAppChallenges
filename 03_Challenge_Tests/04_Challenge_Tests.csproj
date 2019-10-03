@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\03_Console_Repository\03_Console_Repository.csproj">
+    <ProjectReference Include="..\03_Console_Repository\04_Console_Repository.csproj">
       <Project>{D1D18F20-7808-44DD-8D09-E0AED712A4FB}</Project>
-      <Name>03_Console_Repository</Name>
+      <Name>04_Console_Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
